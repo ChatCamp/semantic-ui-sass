@@ -13,15 +13,17 @@
              Icon
 *******************************/
 
-@font-face {
-  font-family: 'Icons';
-  src: url("#{$icons-font-path}/icons.eot");
-  src: url("#{$icons-font-path}/icons.eot?#iefix") format('embedded-opentype'), url("#{$icons-font-path}/icons.woff2") format('woff2'), url("#{$icons-font-path}/icons.woff") format('woff'), url("#{$icons-font-path}/icons.ttf") format('truetype'), url("#{$icons-font-path}/icons.svg#icons") format('svg');
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-decoration: inherit;
-  text-transform: none;
+@at-root{
+  @font-face {
+    font-family: 'Icons';
+    src: url("#{$icons-font-path}/icons.eot");
+    src: url("#{$icons-font-path}/icons.eot?#iefix") format('embedded-opentype'), url("#{$icons-font-path}/icons.woff2") format('woff2'), url("#{$icons-font-path}/icons.woff") format('woff'), url("#{$icons-font-path}/icons.ttf") format('truetype'), url("#{$icons-font-path}/icons.svg#icons") format('svg');
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-decoration: inherit;
+    text-transform: none;
+  }
 }
 i.icon {
   display: inline-block;
@@ -61,24 +63,27 @@ i.icon.loading {
   -webkit-animation: icon-loading 2s linear infinite;
           animation: icon-loading 2s linear infinite;
 }
-@-webkit-keyframes icon-loading {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+
+@at-root{
+  @-webkit-keyframes icon-loading {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
   }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes icon-loading {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  @keyframes icon-loading {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
   }
 }
 
